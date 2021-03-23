@@ -107,11 +107,13 @@ estimation <- function(
     fit = mod_ms
   )
   
+  mod_ms %>% 
+    summary() %>% 
+    print()
+  # if(!dir.exists(dir_name))dir.create(dir_name)
   
-  if(!dir.exists(dir_name))dir.create(dir_name)
-  
-  write_csv(output_data, str_c(dir_name, "/output.csv"))
-  save(output_list, file = str_c(dir_name, "/result.RData"))
+  write_csv(output_data, str_c(dir_name, "_output.csv"))
+  # save(output_list, file = str_c(dir_name, "_result.RData"))
   
   return(output_list)
   
@@ -122,11 +124,11 @@ estimation <- function(
 
 
 list_fies_names <- list(
-  name_jp = c("外食", "映画・演劇等入場料", "交通"),
-  name_en = c("eatingout", "theater", "transportation")
+  name_jp = c("外食", "交通"),
+  name_en = c("eatingout", "transportation")
 )
 
-fies <- read_csv("preprocessed_data/fies.csv")
+fies <- read_csv("data/preprocessed_fies.csv")
 
 for(i in 1:length(list_fies_names$name_jp)){
   
@@ -138,32 +140,28 @@ for(i in 1:length(list_fies_names$name_jp)){
   data_target <- sub_fies$value_change
   
   est_res <- estimation(
-    data_date, data_target, str_c("output/", list_fies_names$name_en[i])
+    data_date, data_target, str_c("result/", list_fies_names$name_en[i])
   )
   
-  # first_30_prob <- est_res$fit@Fit@smoProb[2:31,1]
-  # 
-  # approx_change_count <- sum(abs(first_30_prob[1:29] + first_30_prob[2:30] -1)/2 < 0.2)
-  # cat("transition is ", approx_change_count, " times.\n")
 }
 
 # apple mobility
-apple_mobility <- read_csv("preprocessed_data/apple_mobility.csv")
+apple_mobility <- read_csv("data/preprocessed_apple.csv")
 
 
 apple_transit_res <- estimation(
   data_date =   apple_mobility$date,  
   data_target = apple_mobility$transit, 
-  dir_name = "output/apple_transit"
+  dir_name = "result/apple_transit"
 )
 
 
 # google mobility
-google_mobility <- read_csv("preprocessed_data/google_mobility.csv")
+google_mobility <- read_csv("data/preprocessed_google.csv")
 
 
 google_station_res <- estimation(
   data_date =   google_mobility$date,  
   data_target = google_mobility$google_station, 
-  dir_name = "output/google_station"
+  dir_name = "result/google_station"
 )

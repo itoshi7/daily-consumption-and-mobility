@@ -18,4 +18,36 @@
 
 
 ## 推定モデルについて
-$ x_t $ 推定に用いる統計モデルは以下である。
+
+推定に用いる統計モデルは以下である。
+
+<!-- $$
+x_t = \mu (S_t) + u_t
+$$ --> 
+
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=x_t%20%3D%20%5Cmu%20(S_t)%20%2B%20u_t%0D"></div>
+
+<!-- $$
+\mu (1) = a, \mu(2) = b,
+$$ --> 
+
+<div align="center"><img style="background: white;" src="https://render.githubusercontent.com/render/math?math=%5Cmu%20(1)%20%3D%20a%2C%20%5Cmu(2)%20%3D%20b%2C%0D"></div>
+
+$$
+P(S_t=1|S_t=1) = \pi_{11}, P(S_t=2|S_t=1) = 1-\pi_{11},$$ 
+
+$$
+P(S_t=1|S_t=2) = 1-\pi_{22}, P(S_t=2|S_t=2) = 1-\pi_{22}
+$$
+
+\begin{align*}
+x_t = \mu (S_t) + u_t\\
+\end{align*}
+
+![\begin{align*}
+x_t &= \mu (S_t) + u_t\\
+\end{align*}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ax_t+%26%3D+%5Cmu+%28S_t%29+%2B+u_t%5C%5C%0A%5Cend%7Balign%2A%7D)
+
+aaa
+
+

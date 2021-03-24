@@ -2,3 +2,12 @@
 .Rhistory
 .RData
 .Ruserdata
+result/apple_transit_output.csv
+daily-consumption-and-mobility.Rproj
+data/apple.csv
+data/fies.csv
+result/eatingout_output.csv
+result/g1.png
+result/g2.png
+result/google_station_output.csv
+result/transportation_output.csv

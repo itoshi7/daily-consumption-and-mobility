@@ -2,7 +2,7 @@ library(tidyverse)
 library(MSwM)
 library(mltools)
 library(data.table)
-
+if(!dir.exists("result"))dir.create("result")
 
 estimation <- function(
   data_date,

@@ -47,7 +47,7 @@ plot_fig_1 <- function(
     )+
     ylab(ylab_input)+
     xlab("")+ 
-    scale_fill_manual(values=c("#E69F00", "#56B4E9"))+
+    scale_fill_manual(values=c("#FFFFFF", "#56B4E9"))+
     ggtitle(title_input)
 }
 
@@ -109,7 +109,7 @@ m1 <- apple_data %>%
   scale_x_date(date_labels = "%y/%m/%d", 
                breaks = apple_labels
   )+
-  scale_fill_manual(values=c("#E69F00", "#56B4E9"))+
+  scale_fill_manual(values=c("#FFFFFF", "#56B4E9"))+
   ylab("")+
   xlab("")+
   ggtitle("Apple モビリティデータ, 交通機関")
@@ -133,7 +133,7 @@ m2 <- google_data %>%
     plot.title = element_text(hjust = 0.5),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )+
-  scale_fill_manual(values=c("#E69F00", "#56B4E9"))+
+  scale_fill_manual(values=c("#FFFFFF", "#56B4E9"))+
   scale_x_date(date_labels = "%y/%m/%d", 
                breaks = google_labels
   )+

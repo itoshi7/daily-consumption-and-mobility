@@ -13,3 +13,5 @@ result/transportation_output.csv
 data/preprocessed_apple.csv
 data/preprocessed_fies.csv
 data/preprocessed_google.csv
+data/apple_latest.csv
+result/g3.png

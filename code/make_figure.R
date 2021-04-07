@@ -53,13 +53,13 @@ plot_fig_1 <- function(
 
 p1_test <- plot_fig_1(
   ms_data = eatingout_data,
-  title_input = "外食",
+  title_input = "外食費",
   ylab_input = "同月同日からの変化率"
 )
 
 p2_test <- plot_fig_1(
   ms_data = transportaion_data,
-  title_input = "交通",
+  title_input = "交通費",
   ylab_input = ""
 )
 

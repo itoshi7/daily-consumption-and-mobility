@@ -1,7 +1,7 @@
 library(tidyverse)
 library(lubridate)
 
-apple_data <- read_csv("data/apple_latest.csv")
+apple_data <- read_csv("data/apple.csv")
 
 apple_data_jp <- apple_data %>% 
   filter(
